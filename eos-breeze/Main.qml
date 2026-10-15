@@ -302,16 +302,10 @@ Item {
             }
         }
 
-        VirtualKeyboardLoader {
-            id: inputPanel
-
-            z: 1
-
-            screenRoot: root
-            mainStack: mainStack
-            mainBlock: userListComponent
-            passwordField: userListComponent.mainPasswordBox
-        }
+	Item {
+	    id: inputPanel
+	    property bool keyboardActive: false
+	}
 
         Component {
             id: userPromptComponent
